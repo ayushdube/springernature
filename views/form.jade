@@ -1,0 +1,60 @@
+doctype html
+html
+    head
+        title Sign Up 
+    body
+        style(type='text/css').
+            body {
+                text-align: center;
+            }
+            input(type="checkbox"){
+                display: block;
+            }
+            label {
+                display: inline-block;
+                margin-left: 10px;
+            }
+            .inputUI {
+                    margin: 30px auto;
+                    display: block;
+                    height:30px;
+                    width:300px;
+                }
+            .center {
+                max-width: 500px;
+                margin: auto;
+            }
+            .submitBtn {
+                display: block;
+                margin: 0 auto;
+                width:300px;
+                height: 30px;
+                background: #33B5E5;
+                border: none;
+                color: #fff;
+            }
+            .checkbox{
+                display: inline-block;
+                margin: 20px auto;
+            }
+            .terms{
+                margin-top:30px;
+            }
+            .heading{
+                font-weight : bold;
+                font-size: 30px;
+                margin-top:50px;
+            }
+  form(action='/signup', method='POST')
+    p(class="center heading") Sign Up
+    p(class="center")
+      input(required, placeholder="First Name", class="inputUI", type='text', name='firstname', value='')
+      input(required, placeholder="Last Name", class="inputUI", type='text', name='lastname', value='')
+      input(required, placeholder="Email", class="inputUI", type='email', name='email', value='')
+      input(required, minLength=8, placeholder="Password", class="inputUI", type='password', name='password', value='')
+      input(placeholder="Phone Numer", class="inputUI", type='number', name='phonenumber', value='')
+      input(class="checkbox", type='checkbox', name='newsletter')
+      label Subscribe To  Our News Letter
+      input(class="submitBtn", type='submit', value='Submit')
+
+    p(class="center terms") By Clicking Sign Up you agree to our terms, Terms of Use
