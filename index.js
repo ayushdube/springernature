@@ -28,4 +28,5 @@ app.post('/signup', (req,res) => {
 
 app.listen(5000, () => {
     console.log("Server has started");
+    console.log("Running in :"  + process.env.NODE_ENV); 
 });
